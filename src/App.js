@@ -14,7 +14,7 @@ import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 
 import { logout } from "./actions/auth";
-import { clearMessage } from "./actions/message";
+import { clearMessage } from "./actions/messages";
 
 import { history } from './helpers/history';
 
@@ -123,7 +123,7 @@ class App extends Component {
           </nav>
 
           <div className="container mt-3">
-            <Switch>
+   
               <Route exact path={["/", "/home"]} component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
@@ -131,7 +131,7 @@ class App extends Component {
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
-            </Switch>
+            
           </div>
         </div>
       </Router>

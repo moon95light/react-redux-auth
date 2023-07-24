@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -8,10 +8,12 @@ import CheckButton from "react-validation/build/button";
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
 
+const Redirect = Route();
+
 const required = value => {
     if (!value) {
         return (
-            <div className="alert alert-danger" role="alert">
+            <div className="alert alert-danger" .role="alert">
                 This field is required!
             </div>
         );
