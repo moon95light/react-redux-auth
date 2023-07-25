@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -8,7 +8,6 @@ import CheckButton from "react-validation/build/button";
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
 
-const Redirect = Route();
 
 const required = value => {
     if (!value) {
@@ -72,7 +71,7 @@ class Login extends Component {
         const { isLoggedIn, message } = this.props;
 
         if (isLoggedIn) {
-            return <Redirect to="/profile" />;
+            window.location.replace('https://codefrontend.com');;
         }
 
         return (
